@@ -56,7 +56,7 @@ namespace EASEncoder_Test_App
                 MessageBox.Show("No SAPI voices were found on your device. Speech has been disabled.", "EAS Encoder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 enableSpeechCheckBox.Enabled = false;
                 enableSpeechCheckBox.Checked = false;
-                enableSpeechCheckBox.Text = "Enable Speech (Disabled! No SAPI voices were found)";
+                enableSpeechCheckBox.Text = "Enable Speech (Disabled! No SAPI voices found)";
                 speechGroupBox.Enabled = false;
                 return;
             }
@@ -85,7 +85,8 @@ namespace EASEncoder_Test_App
                 }
             }
 
-            // If neither "paul" nor "david" is found, don't default
+            // If neither "paul" nor "david" is found, default to the first in the list
+            installedVoicesComboBox.SelectedIndex = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -308,10 +309,9 @@ namespace EASEncoder_Test_App
                 return;
             }
 
-            
-
             EASEncoder.EASEncoder.CreateNewMessage(newMessage, chkEbsTones.Checked, chkNwsTone.Checked,
-                formatAnnouncement(txtAnnouncement.Text), _fileName, _openFileLocation, installedVoicesComboBox.SelectedItem.ToString(),
+                formatAnnouncement(txtAnnouncement.Text), _fileName, _openFileLocation,
+                                   installedVoicesComboBox.SelectedItem == null ? "" : installedVoicesComboBox.SelectedItem.ToString(),
                                    enableSpeechCheckBox.Checked, _fileType, speedTrackBar.Value, _fileLocation, _fileNameAndExtension);
 
             btnGenerate.Enabled = true;
@@ -430,7 +430,9 @@ namespace EASEncoder_Test_App
 
 
             var messageStream = EASEncoder.EASEncoder.GetMemoryStreamFromNewMessage(newMessage, chkEbsTones.Checked,
-                chkNwsTone.Checked, formatAnnouncement(txtAnnouncement.Text), installedVoicesComboBox.SelectedItem.ToString(), enableSpeechCheckBox.Checked, speedTrackBar.Value);
+                chkNwsTone.Checked, formatAnnouncement(txtAnnouncement.Text),
+                installedVoicesComboBox.SelectedItem == null ? "" : installedVoicesComboBox.SelectedItem.ToString(),
+                enableSpeechCheckBox.Checked, speedTrackBar.Value);
 
             btnGeneratePlay.Enabled = true;
             btnGeneratePlay.Text = "Stop Playing";
