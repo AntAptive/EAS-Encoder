@@ -19,7 +19,7 @@ namespace EASEncoder_Test_App.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -67,6 +67,36 @@ namespace EASEncoder_Test_App.Properties {
             get {
                 return ResourceManager.GetString("Form1_ValidateInput_Unable_to_create_EAS_message___You_must_enter_a_valid__Sender" +
                         "__id___Ensure_the_id_is_exactly_8_characters_length_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Black {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon LogoIco {
+            get {
+                object obj = ResourceManager.GetObject("LogoIco", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon LogoIcoWhite {
+            get {
+                object obj = ResourceManager.GetObject("LogoIcoWhite", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }
