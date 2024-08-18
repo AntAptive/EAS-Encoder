@@ -1,7 +1,8 @@
 ![EAS Encoder](/EASEncoderBanner.png)
 
 # EAS Encoder
-**Encode EAS audio messages with valid SAME headers!**
+Encode EAS audio messages with valid SAME headers!
+### [Check out my other projects!](https://antaptive.com/projects/)
 ## Features
 * Encode EAS (Emergency Alert System - United States) audio messages with valid SAME (Specific Area Message Encoding) headers
 * EBS (Emergency Broadcast System) attention tones
