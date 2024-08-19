@@ -3,6 +3,8 @@
 # EAS Encoder
 Encode EAS audio messages with valid SAME headers!
 ### [Check out my other projects!](https://antaptive.com/projects/)
+## 🛑⚠️WARNING⚠️🛑
+**EAS Encoder generates valid SAME headers. The developers of this software are not responsible for any misuse. [Learn more](https://www.fcc.gov/enforcement/areas/misuse-eas-sound)**
 ## Features
 * Encode EAS (Emergency Alert System - United States) audio messages with valid SAME (Specific Area Message Encoding) headers
 * EBS (Emergency Broadcast System) attention tones
